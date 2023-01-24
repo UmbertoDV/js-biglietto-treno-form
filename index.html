@@ -21,19 +21,21 @@
 <body>
 	<main>
 		<section id="input-utente">
-			<label>Nome e Cognome</label>
-			<input type="text" name="" id="name">
-			<label>KM da percorrere</label>
-			<input type="text" name="" id="km">
-			<label>Fascia di Età</label>
-			<select name="age" id="age-select">
-				<option value="">Seleziona una opzione</option>
-				<option value="under">Maggiorenne</option>
-				<option value="normal">Minorenne</option>
-				<option value="Over">Over 65</option>
-			</select>
-			<button type="button">Genera</button>
-			<button type="button">Annulla</button>
+			<form>
+				<label>Nome e Cognome</label>
+				<input type="text" name="" id="name">
+				<label>KM da percorrere</label>
+				<input type="text" name="" id="km">
+				<label>Fascia di Età</label>
+				<select name="age" id="age-select">
+					<option value="">Seleziona una opzione</option>
+					<option value="normal">Maggiorenne</option>
+					<option value="under">Minorenne</option>
+					<option value="over">Over 65</option>
+				</select>
+				<button type="button" id="send_button">Genera</button>
+				<input type="reset">
+			</form>
 		</section>
 		<section id="output-utente">
 			<h1>NOME PASSEGGERO</h1>
