@@ -1,14 +1,15 @@
-const nome = document.getElementById("name").value;
-const km = document.getElementById("km").value;
-const age = document.getElementById("age-select").value;
 const sendButton = document.getElementById("send_button");
 const ticketCostKM = 0.21;
-const totalPrice = km * ticketCostKM;
-// console.log(`${sendButton}`);
 
 
 sendButton.addEventListener("click", 
     function(){
+
+        const nome = document.getElementById("name").value;
+        const km = document.getElementById("km").value;
+        const age = document.getElementById("age-select").value;
+        const totalPrice = km * ticketCostKM;
+
         if (age == "under" ) {
             let discountMinorenni = ((totalPrice * 20) / 100);
             let prezzoScontatoMinorenni = totalPrice - discountMinorenni;
