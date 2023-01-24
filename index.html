@@ -18,38 +18,62 @@
 	<script type="text/javascript" src="./js/main.js" defer></script>
 </head>
 
-<body>
+<body class="bg-primary">
 	<main>
-		<section id="input-utente">
-			<form>
-				<label>Nome e Cognome</label>
-				<input type="text" name="" id="name">
-				<label>KM da percorrere</label>
-				<input type="text" name="" id="km">
-				<label>Fascia di Età</label>
-				<select name="age" id="age-select">
-					<option value="">Seleziona una opzione</option>
-					<option value="normal">Maggiorenne</option>
-					<option value="under">Minorenne</option>
-					<option value="over">Over 65</option>
-				</select>
-				<button type="button" id="send_button">Genera</button>
-				<input type="reset">
-			</form>
-		</section>
-		<section id="output-utente">
-			<h1>NOME PASSEGGERO</h1>
-			<h2 id="nome-passeggero">Bello Bellissimo</h2>
-			<h3 class="title-offerta">Offerta</h3>
-			<div class="output-offerta">Biglietto Standard</div>
-			<h3 class="title-carrozza">Carrozza</h3>
-			<div class="output-carrozza">3</div>
-			<h3 class="title-codice">Codice CP</h3>
-			<div class="output-codice">49836</div>
-			<h3 class="title-costo-totale">Costo Biglietto</h3>
-			<div class="output-costo">3.1</div>
-		</section>
+		<div class="container pt-4">
+			<section id="input-utente" class="rounded-3 bg-warning">
+				<form class="d-flex flex-column align-items-center gap-3 p-4">
+					<h1 class="fw-bolder">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+					<div class="all-input d-flex gap-5">
+						<div class="nome">
+							<label>Nome e Cognome</label><br>
+							<input type="text" name="" id="name">
+						</div>
+						<div class="kilometri">
+							<label>KM da percorrere</label><br>
+							<input type="text" name="" id="km">
+						</div>
+						<div class="fascia-eta">
+							<label>Fascia di Età</label><br>
+							<select name="age" id="age-select">
+								<option value="">Seleziona una opzione</option>
+								<option value="normal">Maggiorenne</option>
+								<option value="under">Minorenne</option>
+								<option value="over">Over 65</option>
+							</select>
+						</div>
+					</div>
+					<div class="buttons">
+						<button type="button" id="send_button">Genera</button>
+						<input type="reset">
+					</div>
+				</form>
+			</section>
+		</div>
+		<div class="container">
+			<section id="output-utente" class="d-flex justify-content-center gap-5 bg-warning rounded-3 mt-5 p-4">
+				<div class="nome text-center">
+					<h2 class="fw-bold">NOME PASSEGGERO</h2>
+					<h3 id="nome-passeggero"></h3>
+				</div>
+				<div class="biglietto text-center">
+					<h3 class="title-offerta fw-bold">Tipo di Biglietto</h3>
+					<div class="output-offerta"></div>
+				</div>
+				<div class="carrozza text-center">
+					<h3 class="title-carrozza fw-bold">Carrozza</h3>
+					<div class="output-carrozza"></div>
+				</div>
+				<div class="codice-cp text-center">
+					<h3 class="title-codice fw-bold">Codice CP</h3>
+					<div class="output-codice"></div>
+				</div>
+				<div class="costo-tot text-center">
+					<h3 class="title-costo-totale fw-bold">Costo Biglietto</h3>
+					<div class="output-costo"></div>
+				</div>
+			</section>
+		</div>
 	</main>
 </body>
-
 </html>

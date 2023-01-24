@@ -4,6 +4,7 @@ const nomePasseggero = document.getElementById("nome-passeggero");
 const numeroCarrozza = document.querySelector(".output-carrozza");
 const codiceCP = document.querySelector(".output-codice");
 const costoBiglietto = document.querySelector(".output-costo");
+const tipoOfferta = document.querySelector(".output-offerta");
 
 sendButton.addEventListener("click", 
     function(){
@@ -19,6 +20,7 @@ sendButton.addEventListener("click",
             nomePasseggero.innerHTML = `${nome}`;
             numeroCarrozza.innerHTML = `${randomNumeroCarrozza}`;
             codiceCP.innerHTML = `${randomCP}`;
+            tipoOfferta.innerHTML = "Biglietto Standard";
     
             if (age == "under" ) {
                 let discountMinorenni = ((totalPrice * 20) / 100);
